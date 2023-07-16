@@ -2,8 +2,7 @@
 function App() {
 
   return (
-<h1>hola mundo en React</h1>
-
+<h1>hola mundo en React <br /> como andan ?</h1>
 
 
   )
