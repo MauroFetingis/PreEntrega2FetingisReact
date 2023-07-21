@@ -6,36 +6,32 @@ import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@her
 const navigation = {
   categories: [
     {
-      id: 'women',
-      name: 'Women',
-      featured: [
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        },
-        {
-          name: 'Basic Tees',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        },
+      id: 'celulares',
+      name: 'Celulares',
+      featured: [{
+        name: 'Samsung',
+        href: '#',
+        imageSrc: './img/galaxy.jpg',
+        imageAlt: '#',
+      },
+      {
+        name: 'Apple',
+        href: '#',
+        imageSrc: './img/iphone.jpg',
+        imageAlt:
+          '#',
+      },
+
       ],
       sections: [
         {
-          id: 'clothing',
-          name: 'Clothing',
+          id: 'dispositivos',
+          name: 'Dispositivos',
           items: [
-            { name: 'Tops', href: '#' },
-            { name: 'Dresses', href: '#' },
-            { name: 'Pants', href: '#' },
-            { name: 'Denim', href: '#' },
-            { name: 'Sweaters', href: '#' },
-            { name: 'T-Shirts', href: '#' },
-            { name: 'Jackets', href: '#' },
-            { name: 'Activewear', href: '#' },
-            { name: 'Browse All', href: '#' },
+            { name: 'Apple', href: '#' },
+            { name: 'Samsung', href: '#' },
+            { name: 'Google', href: '#' },
+,
           ],
         },
         {
@@ -43,86 +39,61 @@ const navigation = {
           name: 'Accessories',
           items: [
             { name: 'Watches', href: '#' },
-            { name: 'Wallets', href: '#' },
-            { name: 'Bags', href: '#' },
-            { name: 'Sunglasses', href: '#' },
-            { name: 'Hats', href: '#' },
-            { name: 'Belts', href: '#' },
+
           ],
         },
-        {
-          id: 'brands',
-          name: 'Brands',
-          items: [
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Significant Other', href: '#' },
-          ],
-        },
+        
       ],
     },
     {
-      id: 'men',
-      name: 'Men',
+      id: 'other',
+      name: 'Otros dispositivos',
       featured: [
         {
-          name: 'New Arrivals',
+          name: 'Mac Books',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
+          imageSrc: './img/mac2.jpg',
+          imageAlt: '#',
         },
         {
-          name: 'Artwork Tees',
+          name: 'Apple TV',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
+          imageSrc: './img/appletv2.jpg',
           imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
+            '#',
         },
       ],
       sections: [
         {
-          id: 'clothing',
-          name: 'Clothing',
+          id: 'laptops',
+          name: 'Laptops',
           items: [
-            { name: 'Tops', href: '#' },
-            { name: 'Pants', href: '#' },
-            { name: 'Sweaters', href: '#' },
-            { name: 'T-Shirts', href: '#' },
-            { name: 'Jackets', href: '#' },
-            { name: 'Activewear', href: '#' },
-            { name: 'Browse All', href: '#' },
+            { name: 'MacBook Air', href: '#' },
+            { name: 'MacBook Pro', href: '#' },
           ],
         },
         {
           id: 'accessories',
-          name: 'Accessories',
+          name: 'Accessorios',
           items: [
-            { name: 'Watches', href: '#' },
-            { name: 'Wallets', href: '#' },
-            { name: 'Bags', href: '#' },
-            { name: 'Sunglasses', href: '#' },
-            { name: 'Hats', href: '#' },
-            { name: 'Belts', href: '#' },
+            { name: 'Apple Watch', href: '#' },
+
+
           ],
         },
         {
-          id: 'brands',
-          name: 'Brands',
+          id: 'tv',
+          name: 'Apple TV',
           items: [
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
+            { name: 'Apple TV 4K', href: '#' },
+
           ],
         },
       ],
     },
   ],
   pages: [
-    { name: 'Company', href: '#' },
-    { name: 'Stores', href: '#' },
+
   ],
 }
 
@@ -205,7 +176,7 @@ export default function Navigation() {
                                 {item.name}
                               </a>
                               <p aria-hidden="true" className="mt-1">
-                                Shop now
+                                
                               </p>
                             </div>
                           ))}
@@ -248,24 +219,19 @@ export default function Navigation() {
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
                     <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Sign in
+                      Iniciar sesion
                     </a>
                   </div>
                   <div className="flow-root">
                     <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Create account
+                      Crear cuenta
                     </a>
                   </div>
                 </div>
 
                 <div className="border-t border-gray-200 px-4 py-6">
                   <a href="#" className="-m-2 flex items-center p-2">
-                    <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
-                      className="block h-auto w-5 flex-shrink-0"
-                    />
-                    <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                    <span className="ml-3 block text-base font-medium text-gray-900">US</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
@@ -276,8 +242,8 @@ export default function Navigation() {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Get free delivery on orders over $100
+        <p className="flex h-10 items-center justify-center bg-violet-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+          Aprovecha las ofertas
         </p>
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -295,10 +261,9 @@ export default function Navigation() {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
-                  <span className="sr-only">Your Company</span>
                   <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                    className="h-14 overflow-hidden"
+                    src="./img/logo2.png"
                     alt=""
                   />
                 </a>
@@ -334,7 +299,7 @@ export default function Navigation() {
                             leaveTo="opacity-0"
                           >
                             <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
-                              {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
+                              {}
                               <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
 
                               <div className="relative bg-white">
@@ -355,7 +320,7 @@ export default function Navigation() {
                                             {item.name}
                                           </a>
                                           <p aria-hidden="true" className="mt-1">
-                                            Shop now
+                                            
                                           </p>
                                         </div>
                                       ))}
@@ -407,30 +372,25 @@ export default function Navigation() {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Sign in
+                    Iniciar sesion
                   </a>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Create account
+                    Crear cuenta
                   </a>
                 </div>
 
                 <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
-                    <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
-                      className="block h-auto w-5 flex-shrink-0"
-                    />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
-                    <span className="sr-only">, change currency</span>
+                    <span className="ml-3 block text-sm font-medium">USD</span>
+                    <span className="sr-only">,</span>
                   </a>
                 </div>
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
                   <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Search</span>
+                    <span className="sr-only">Buscar</span>
                     <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
                   </a>
                 </div>
@@ -443,7 +403,7 @@ export default function Navigation() {
                       aria-hidden="true"
                     />
                     <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
-                    <span className="sr-only">items in cart, view bag</span>
+                    <span className="sr-only">Ver carrito</span>
                   </a>
                 </div>
               </div>
