@@ -3,6 +3,7 @@ import Footer from "./components/footer/Footer";
 import Navigation from "./components/navbar/Navigation";
 import CartContainer from "./components/pages/cart/CartContainer";
 import Home from "./components/pages/home/Home";
+import ProductDetails from "./components/pages/productDetails/ProductDetails";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     
     <Route element={<Navigation/>}>
     <Route exact path ="/" element= {<Home/>} />
+    <Route exact path ="/products" element= {<ProductDetails/>} />
     <Route exact path ="/cart" element= {<CartContainer/>} />
     <Route exact path ="/about" element= {<Home/>} />
     </Route>

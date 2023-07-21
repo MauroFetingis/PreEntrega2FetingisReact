@@ -1,5 +1,6 @@
 import React from 'react'
 import MainCarousel from '../../headerCarousel/MainCarousel'
+import ProductDetails from '../productDetails/ProductDetails'
 
 const Home = () => {
   return (
@@ -8,13 +9,9 @@ const Home = () => {
     
         <h1 className='flex justify-center font-bold '>Bienvenido a la tienda</h1>
         <div>
-      
-
-        <MainCarousel/>
+      <MainCarousel/>
         </div>
-        <div>
-            
-        </div>
+        
       </header>
     </div>
   )

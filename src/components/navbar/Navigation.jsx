@@ -2,7 +2,7 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import { Outlet, Link } from "react-router-dom"
 const navigation = {
   categories: [
     {
@@ -10,13 +10,13 @@ const navigation = {
       name: 'Celulares',
       featured: [{
         name: 'Samsung',
-        href: '#',
+        href: '/products',
         imageSrc: './img/galaxy.jpg',
         imageAlt: '#',
       },
       {
         name: 'Apple',
-        href: '#',
+        href: '/products',
         imageSrc: './img/iphone.jpg',
         imageAlt:
           '#',
@@ -28,9 +28,9 @@ const navigation = {
           id: 'dispositivos',
           name: 'Dispositivos',
           items: [
-            { name: 'Apple', href: '#' },
-            { name: 'Samsung', href: '#' },
-            { name: 'Google', href: '#' },
+            { name: 'Apple', href: '/products' },
+            { name: 'Samsung', href: '/products' },
+            { name: 'Google', href: '/products' },
 ,
           ],
         },
@@ -38,7 +38,7 @@ const navigation = {
           id: 'accessories',
           name: 'Accessories',
           items: [
-            { name: 'Watches', href: '#' },
+            { name: 'Watches', href: '/products' },
 
           ],
         },
@@ -57,7 +57,7 @@ const navigation = {
         },
         {
           name: 'Apple TV',
-          href: '#',
+          href: '/products',
           imageSrc: './img/appletv2.jpg',
           imageAlt:
             '#',
@@ -68,15 +68,15 @@ const navigation = {
           id: 'laptops',
           name: 'Laptops',
           items: [
-            { name: 'MacBook Air', href: '#' },
-            { name: 'MacBook Pro', href: '#' },
+            { name: 'MacBook Air', href: '/products' },
+            { name: 'MacBook Pro', href: '/products' },
           ],
         },
         {
           id: 'accessories',
           name: 'Accessorios',
           items: [
-            { name: 'Apple Watch', href: '#' },
+            { name: 'Apple Watch', href: '/products' },
 
 
           ],
@@ -85,7 +85,7 @@ const navigation = {
           id: 'tv',
           name: 'Apple TV',
           items: [
-            { name: 'Apple TV 4K', href: '#' },
+            { name: 'Apple TV 4K', href: '/products' },
 
           ],
         },
@@ -260,7 +260,7 @@ export default function Navigation() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
+                <a href="/">
                   <img
                     className="h-14 overflow-hidden"
                     src="./img/logo2.png"
@@ -397,7 +397,7 @@ export default function Navigation() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 flex items-center p-2">
+                  <a href="/cart" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
@@ -408,6 +408,9 @@ export default function Navigation() {
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <Outlet/>
           </div>
         </nav>
       </header>

@@ -1,7 +1,6 @@
 import React from 'react'
 import "./Product.css"
-
-const ProductCard = ({ product }) => {
+const ProductCard = ({ productos }) => {
     return (
         <div className='productCard w-[15rem] m-3 transition-all cursor pointer' >
             <div className='h-[20rem]'>

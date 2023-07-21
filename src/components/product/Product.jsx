@@ -5,6 +5,7 @@ import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import { productos } from '../../productsMock'
+import { Navigate } from 'react-router-dom'
 
 const sortOptions = [
   { name: 'Price: Low to High', href: '#', current: false },
@@ -17,6 +18,30 @@ function classNames(...classes) {
 
 export default function Product() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+
+  // const location = useLocation()
+  // const navigate=useNavigate();
+
+  // const handleFilter =()=>{
+  //   const searchParamms=new URLSearchParams(location.search)
+
+  //   let filterValue = searchParamms.getAll(sectionId)
+  //   if (filterValue.length > 0 && filterValue[0].split(",").includes(value)){
+  //     filterValue=filterValue[0].split(".").filter((item)=>item!==value);
+  //     if(filterValue.length===0){
+  //       searchParamms.delete(sectionId)
+
+  //     }
+  //   }
+  //   else{
+  //     filterValue.push(value)
+  //   }
+  //   if(filterValue.length){
+  //     searchParamms.set(sectionId,filterValue.join(","));
+  //     const query=searchParamms.toString();
+  //     navigate({search:'?${query}'})
+  //   }
+  // }
 
   return (
     <div className="bg-white">
